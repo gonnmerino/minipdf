@@ -161,12 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 const whatsappBtn = document.getElementById("whatsappBtn");
 
-whatsappBtn.addEventListener("click", async () => {
-  await exportToPDF_TextoReal();
+whatsappBtn.addEventListener("click", () => {
+
+  exportToPDF_TextoReal();
 
   const text = encodeURIComponent(
-    ""
+    "Te comparto este PDF"
   );
 
-  window.open(`https://wa.me/?text=${text}`, "_blank");
+  const waUrl = `https://wa.me/?text=${text}`;
+
+  window.open(waUrl, "_blank");
 });
+
