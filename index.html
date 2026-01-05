@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINIPDF</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="shortcut icon" href="faviconwhite.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Quill CSS -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+</head>
+
+<body
+  class="min-h-screen bg-gradient-to-br from-[#424242] to-[#000000] p-3 sm:p-4 md:p-5 lg:p-6 font-['Segoe_UI',_Tahoma,_Geneva,_Verdana,_sans-serif]">
+  <div
+    class="max-w-4xl mx-auto bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl md:shadow-2xl p-4 sm:p-6 md:p-8 min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[90vh]">
+    <!-- Header -->
+    <header class="text-center mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-100 sm:border-b-2">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 sm:mb-3">MINI-PDF</h1>
+      <p class="text-sm sm:text-base md:text-lg text-gray-600">Escribe y exporta directamente a PDF</p>
+    </header>
+
+    <!-- Controles -->
+    <div
+      class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mb-6 p-3 sm:p-4 md:p-5 bg-gray-50 rounded-lg sm:rounded-xl border border-gray-200">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+        <button id="exportBtn"
+          class="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 cursor-pointer transition active:scale-95">
+          <span class="hidden xs:inline">📥</span>
+          <span>Descargar PDF</span>
+        </button>
+        <button id="whatsappBtn"
+          class="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 cursor-pointer transition active:scale-95">
+          <span>Enviar por WhatsApp</span>
+        </button>
+        <button id="clearBtn"
+          class="cursor-pointer py-3 sm:px-5 sm:py-3 md:px-6 md:py-3 bg-gray-600 text-white font-semibold rounded-lg flex items-center justify-center gap-2 hover:bg-gray-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
+          <span class="hidden xs:inline">🗑️</span>
+          <span>Limpiar</span>
+        </button>
+      </div>
+
+      <div
+        class="bg-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg border border-gray-300 flex flex-col xs:flex-row items-stretch xs:items-center gap-2 xs:gap-3 w-full sm:w-auto sm:ml-auto">
+        <label for="filename"
+          class="font-semibold text-gray-700 text-sm sm:text-base whitespace-nowrap">Archivo:</label>
+        <div class="flex items-center gap-2 w-full xs:w-auto">
+          <input type="text" id="filename" value="documento" placeholder="nombre"
+            class="px-2 py-1.5 sm:px-3 sm:py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all w-full xs:w-auto min-w-0 flex-1 text-sm sm:text-base">
+          <span class="text-gray-600 whitespace-nowrap text-sm sm:text-base">.pdf</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editor Quill -->
+    <div id="editor-container"
+      class="border border-gray-300 rounded-lg sm:rounded-xl overflow-hidden mb-6 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] bg-white">
+      <div id="editor" class="h-[300px] sm:h-[400px] md:h-[500px]"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200">
+      <p class="text-xs sm:text-sm text-gray-600">Tu contenido se guarda automáticamente en tu navegador</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

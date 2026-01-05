@@ -1,0 +1,58 @@
+/* =============================
+   QUILL EDITOR PERSONALIZADO
+   ============================= */
+
+.ql-toolbar {
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.ql-container {
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ql-editor {
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111827;
+}
+
+/* Encabezados */
+.ql-editor h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.ql-editor h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.ql-editor h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Párrafos */
+.ql-editor p {
+  margin-bottom: 0.6rem;
+}
+
+/* Listas */
+.ql-editor ul,
+.ql-editor ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Placeholder */
+.ql-editor.ql-blank::before {
+  color: #9ca3af;
+  font-style: italic;
+}
