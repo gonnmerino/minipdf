@@ -9,14 +9,14 @@
   <!-- Open Graph (WhatsApp / LinkedIn / Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MiniPDF – Editor online a PDF" />
-  <meta property="og:description"
-    content="Escribí tu documento y exportalo a PDF en segundos. Todo desde el navegador sin complicaciones." />
+  <meta property="og:description"content="Escribí tu documento y exportalo a PDF en segundos. Todo desde el navegador sin complicaciones." />
   <meta property="og:url" content="https://minipdf.netlify.app/" />
   <meta property="og:image" content="https://minipdf.netlify.app/og-image.png" />
   <!-- Twitter (opcional, pero suma) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MiniPDF – Editor online a PDF" />
-  <meta name="twitter:description" content="Editor simple para escribir y exportar a PDF, sin registros ni complicaciones." />
+  <meta name="twitter:description"
+    content="Editor simple para escribir y exportar a PDF, sin registros ni complicaciones." />
   <meta name="twitter:image" content="https://minipdf.netlify.app/og-image.png" />
   <title>MiniPDF - Un editor simple para exportar a PDF</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -33,8 +33,11 @@
     class="max-w-4xl mx-auto bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl md:shadow-2xl p-4 sm:p-6 md:p-8 min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[90vh]">
     <!-- Header -->
     <header class="text-center mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-100 sm:border-b-2">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 sm:mb-3">MINI-PDF</h1>
-      <p class="text-sm sm:text-base md:text-lg text-gray-600">Escribe y exporta directamente a PDF</p>
+      <div class="flex flex-row mx-auto justify-center">
+        <img src="favicon.ico" class=" mt-1 w-16" alt="">
+        <h1 class="text-2xl mt-auto mr-10 sm:text-3xl md:text-4xl font-bold text-gray-800 sm:mb-3">MINI-PDF</h1>
+      </div>
+      <p class="text-sm sm:text-base md:text-lg pt-4 text-gray-600">Escribe y exporta directamente a PDF</p>
     </header>
 
     <!-- Controles -->
